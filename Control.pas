@@ -7,7 +7,8 @@ uses
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs;
 
 type
-  TForm1 = class(TForm)
+  TF_Control = class(TForm)
+    StyleBook1: TStyleBook;
   private
     { private êÈåæ }
   public
@@ -15,7 +16,7 @@ type
   end;
 
 var
-  Form1: TForm1;
+  F_Control: TF_Control;
 
 implementation
 

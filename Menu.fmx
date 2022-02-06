@@ -1,5 +1,5 @@
 object F_Menu: TF_Menu
-  Left = 660
+  Left = 667
   Top = 292
   Caption = #27700#36947#26009#37329#31649#29702
   ClientHeight = 501
@@ -10,7 +10,7 @@ object F_Menu: TF_Menu
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
   OnCreate = FormCreate
-  Left = 660
+  Left = 667
   Top = 292
   DesignerMasterStyle = 0
   object ScaledLayout1: TScaledLayout
@@ -101,8 +101,9 @@ object F_Menu: TF_Menu
         Size.PlatformDefault = False
         TabOrder = 3
         Text = #12510#12491#12517#12450#12523
-        OnMouseMove = bt_ManualMouseMove
-        OnMouseLeave = bt_ManualMouseLeave
+        OnClick = ButtonClick
+        OnMouseMove = ButtonMouseMove
+        OnMouseLeave = ButtonMouseLeave
       end
       object bt_InputData: TButton
         Align = Client
@@ -115,8 +116,9 @@ object F_Menu: TF_Menu
         Size.PlatformDefault = False
         TabOrder = 2
         Text = #12487#12540#12479#20837#21147
-        OnMouseMove = bt_InputDataMouseMove
-        OnMouseLeave = bt_InputDataMouseLeave
+        OnClick = ButtonClick
+        OnMouseMove = ButtonMouseMove
+        OnMouseLeave = ButtonMouseLeave
       end
       object bt_FormCreate: TButton
         Align = Client
@@ -129,8 +131,9 @@ object F_Menu: TF_Menu
         Size.PlatformDefault = False
         TabOrder = 1
         Text = #24115#31080#20316#25104
-        OnMouseMove = bt_FormCreateMouseMove
-        OnMouseLeave = bt_FormCreateMouseLeave
+        OnClick = ButtonClick
+        OnMouseMove = ButtonMouseMove
+        OnMouseLeave = ButtonMouseLeave
       end
       object bt_Control: TButton
         Align = Client
@@ -143,8 +146,9 @@ object F_Menu: TF_Menu
         Size.PlatformDefault = False
         TabOrder = 0
         Text = #35373#23450
-        OnMouseMove = bt_ControlMouseMove
-        OnMouseLeave = bt_ControlMouseLeave
+        OnClick = ButtonClick
+        OnMouseMove = ButtonMouseMove
+        OnMouseLeave = ButtonMouseLeave
       end
       object mm_Manual: TMemo
         Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
