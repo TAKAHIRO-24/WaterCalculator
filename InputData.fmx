@@ -10,6 +10,7 @@ object F_InputData: TF_InputData
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
   OnCreate = FormCreate
+  OnKeyDown = FormKeyDown
   DesignerMasterStyle = 0
   object StyleBook1: TStyleBook
     Styles = <
@@ -26961,6 +26962,12 @@ object F_InputData: TF_InputData
           Column = 1
           Control = Grid2
           Row = 1
+        end
+        item
+          Column = 0
+          ColumnSpan = 2
+          Control = Panel1
+          Row = 0
         end>
       RowCollection = <
         item
@@ -26976,7 +26983,7 @@ object F_InputData: TF_InputData
         Size.Width = 194.652175903320300000
         Size.Height = 545.302001953125000000
         Size.PlatformDefault = False
-        TabOrder = 1
+        TabOrder = 0
         RowCount = 28
         Options = [ColumnResize, ColumnMove, ColLines, RowLines, Tabs, Header, HeaderClick, AutoDisplacement]
         Viewport.Width = 174.700000000000000000
@@ -26996,7 +27003,7 @@ object F_InputData: TF_InputData
         Size.Width = 804.347839355468800000
         Size.Height = 545.302001953125000000
         Size.PlatformDefault = False
-        TabOrder = 0
+        TabOrder = 3
         RowCount = 28
         OnGetValue = Grid2GetValue
         OnSetValue = Grid2SetValue
@@ -27053,6 +27060,103 @@ object F_InputData: TF_InputData
         object IntegerColumn13: TIntegerColumn
           Header = #65299#26376
           Size.Width = 61.000000000000000000
+        end
+      end
+      object Panel1: TPanel
+        Align = Client
+        Size.Width = 999.000000000000000000
+        Size.Height = 104.697982788085900000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        object et_year: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 0
+          KeyboardType = NumberPad
+          MaxLength = 4
+          FilterChar = '0123456789'
+          TextSettings.Font.Size = 20.000000000000000000
+          TextSettings.HorzAlign = Center
+          Position.X = 144.000000000000000000
+          Position.Y = 24.000000000000000000
+          Size.Width = 70.000000000000000000
+          Size.Height = 30.000000000000000000
+          Size.PlatformDefault = False
+          StyledSettings = [Family, Style, FontColor]
+          CharCase = ecUpperCase
+          OnExit = et_yearExit
+        end
+        object lb_nendo: TLabel
+          StyledSettings = [Family, Style, FontColor]
+          Position.X = 224.000000000000000000
+          Position.Y = 24.000000000000000000
+          Size.Width = 50.000000000000000000
+          Size.Height = 30.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 20.000000000000000000
+          TextSettings.HorzAlign = Center
+          Text = #24180#24230
+          TabOrder = 2
+        end
+        object lb_period1: TLabel
+          Position.X = 64.000000000000000000
+          Position.Y = 64.000000000000000000
+          Size.Width = 97.000000000000000000
+          Size.Height = 17.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.HorzAlign = Trailing
+          Text = #20196#21644'99'#24180'99'#26376
+          TabOrder = 5
+        end
+        object lb_period0: TLabel
+          Position.X = 173.000000000000000000
+          Position.Y = 64.000000000000000000
+          Size.Width = 15.000000000000000000
+          Size.Height = 17.000000000000000000
+          Size.PlatformDefault = False
+          Text = #65374
+          TabOrder = 3
+        end
+        object lb_period2: TLabel
+          Position.X = 198.000000000000000000
+          Position.Y = 64.000000000000000000
+          Size.Width = 97.000000000000000000
+          Size.Height = 17.000000000000000000
+          Size.PlatformDefault = False
+          Text = #20196#21644'99'#24180'99'#26376
+          TabOrder = 4
+        end
+        object lb_nengo: TLabel
+          StyledSettings = [Family, Style, FontColor]
+          Position.X = 85.000000000000000000
+          Position.Y = 24.000000000000000000
+          Size.Width = 50.000000000000000000
+          Size.Height = 30.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 20.000000000000000000
+          TextSettings.HorzAlign = Center
+          Text = #20196#21644
+          TabOrder = 1
+        end
+        object Panel2: TPanel
+          Align = Right
+          Position.X = 750.000000000000000000
+          Size.Width = 249.000000000000000000
+          Size.Height = 104.697982788085900000
+          Size.PlatformDefault = False
+          TabOrder = 6
+          object bt_cansel: TButton
+            Position.X = 40.000000000000000000
+            Position.Y = 40.000000000000000000
+            TabOrder = 0
+            Text = 'F3:'#12461#12515#12531#12475#12523
+            OnClick = bt_canselClick
+          end
+          object bt_record: TButton
+            Position.X = 136.000000000000000000
+            Position.Y = 40.000000000000000000
+            TabOrder = 1
+            Text = 'F9:'#35352#37682
+          end
         end
       end
     end

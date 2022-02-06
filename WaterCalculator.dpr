@@ -7,7 +7,8 @@ uses
   Manual in 'Manual.pas' {F_Manual},
   InputData in 'InputData.pas' {F_InputData},
   FormCreate in 'FormCreate.pas' {F_FormCreate},
-  Control in 'Control.pas' {F_Control};
+  Control in 'Control.pas' {F_Control},
+  Kyotu in 'Kyotu.pas';
 
 {$R *.res}
 
