@@ -22,18 +22,10 @@ type
     mm_Control: TMemo;
     ScaledLayout1: TScaledLayout;
     procedure FormCreate(Sender: TObject);
-    procedure bt_ManualMouseMove(Sender: TObject; Shift: TShiftState; X,
+    procedure ButtonMouseMove(Sender: TObject; Shift: TShiftState; X,
       Y: Single);
-    procedure bt_InputDataMouseMove(Sender: TObject; Shift: TShiftState; X,
-      Y: Single);
-    procedure bt_FormCreateMouseMove(Sender: TObject; Shift: TShiftState; X,
-      Y: Single);
-    procedure bt_ControlMouseMove(Sender: TObject; Shift: TShiftState; X,
-      Y: Single);
-    procedure bt_ManualMouseLeave(Sender: TObject);
-    procedure bt_InputDataMouseLeave(Sender: TObject);
-    procedure bt_FormCreateMouseLeave(Sender: TObject);
-    procedure bt_ControlMouseLeave(Sender: TObject);
+    procedure ButtonMouseLeave(Sender: TObject);
+    procedure ButtonClick(Sender: TObject);
   private
     { private 宣言 }
     procedure InitProc;
@@ -45,6 +37,9 @@ var
   F_Menu: TF_Menu;
 
 implementation
+
+uses
+  Manual, InputData, FormCreate, Control;
 
 {$R *.fmx}
 
@@ -61,53 +56,107 @@ begin
 end;
 
 //----------------------------------------------------------------------------//
+//  onClick
+//----------------------------------------------------------------------------//
+procedure TF_Menu.ButtonClick(Sender: TObject);
+var
+  btName: String;
+  F_FormObject: TForm;
+begin
+  try
+    btName := TButton(Sender).Name;
+
+    if (btName = 'bt_Manual') then
+    begin
+      F_FormObject := TF_Manual.Create(Self);
+    end
+    else
+    if (btName = 'bt_InputData') then
+    begin
+      F_FormObject := TF_InputData.Create(Self);
+    end
+    else
+    if (btName = 'bt_FormCreate') then
+    begin
+      F_FormObject := TF_FormCreate.Create(Self);
+    end
+    else
+    if (btName = 'bt_Control') then
+    begin
+      F_FormObject := TF_Control.Create(Self);
+    end;
+
+    F_FormObject.ShowModal;
+  finally
+    F_FormObject.Free;
+  end;
+end;
+
+//----------------------------------------------------------------------------//
 //  マウスオーバー
 //----------------------------------------------------------------------------//
-procedure TF_Menu.bt_ManualMouseMove(Sender: TObject; Shift: TShiftState; X,
+procedure TF_Menu.ButtonMouseMove(Sender: TObject; Shift: TShiftState; X,
   Y: Single);
+var
+  btName: String;
+  mmObject: TMemo;
 begin
-  mm_Manual.Visible := True;
-end;
+  btName := TButton(Sender).Name;
 
-procedure TF_Menu.bt_InputDataMouseMove(Sender: TObject; Shift: TShiftState; X,
-  Y: Single);
-begin
-  mm_InputData.Visible := True;
-end;
+  if (btName = 'bt_Manual') then
+  begin
+    mmObject := mm_Manual;
+  end
+  else
+  if (btName = 'bt_InputData') then
+  begin
+    mmObject := mm_InputData;
+  end
+  else
+  if (btName = 'bt_FormCreate') then
+  begin
+    mmObject := mm_FormCreate;
+  end
+  else
+  if (btName = 'bt_Control') then
+  begin
+    mmObject := mm_Control;
+  end;
 
-procedure TF_Menu.bt_FormCreateMouseMove(Sender: TObject; Shift: TShiftState; X,
-  Y: Single);
-begin
-  mm_FormCreate.Visible := True;
-end;
-
-procedure TF_Menu.bt_ControlMouseMove(Sender: TObject; Shift: TShiftState; X,
-  Y: Single);
-begin
-  mm_Control.Visible := True;
+  mmObject.Visible := True;
 end;
 
 //----------------------------------------------------------------------------//
 //  マウスリーブ
 //----------------------------------------------------------------------------//
-procedure TF_Menu.bt_ManualMouseLeave(Sender: TObject);
+procedure TF_Menu.ButtonMouseLeave(Sender: TObject);
+var
+  btName: String;
+  mmObject: TMemo;
 begin
-  mm_Manual.Visible := False;
-end;
+  btName := TButton(Sender).Name;
 
-procedure TF_Menu.bt_InputDataMouseLeave(Sender: TObject);
-begin
-  mm_InputData.Visible := False;
-end;
+  if (btName = 'bt_Manual') then
+  begin
+    mmObject := mm_Manual;
+  end
+  else
+  if (btName = 'bt_InputData') then
+  begin
+    mmObject := mm_InputData;
+  end
+  else
+  if (btName = 'bt_FormCreate') then
+  begin
+    mmObject := mm_FormCreate;
+  end
+  else
+  if (btName = 'bt_Control') then
+  begin
+    mmObject := mm_Control;
+  end;
 
-procedure TF_Menu.bt_FormCreateMouseLeave(Sender: TObject);
-begin
-  mm_FormCreate.Visible := False;
-end;
-
-procedure TF_Menu.bt_ControlMouseLeave(Sender: TObject);
-begin
-  mm_Control.Visible := False;
+  mmObject.Visible := False;
 end;
 
 //----------------------------------------------------------------------------//

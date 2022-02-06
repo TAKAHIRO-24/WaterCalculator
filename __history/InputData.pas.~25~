@@ -1,0 +1,134 @@
+unit InputData;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, System.Rtti,
+  FMX.Grid.Style, FMX.Controls.Presentation, FMX.ScrollBox, FMX.Grid,
+  FMX.Layouts;
+
+type
+  TF_InputData = class(TForm)
+    StyleBook1: TStyleBook;
+    ScaledLayout1: TScaledLayout;
+    GridPanelLayout1: TGridPanelLayout;
+    Grid1: TGrid;
+    Grid2: TGrid;
+    IntegerColumn1: TIntegerColumn;
+    StringColumn1: TStringColumn;
+    IntegerColumn2: TIntegerColumn;
+    IntegerColumn3: TIntegerColumn;
+    IntegerColumn4: TIntegerColumn;
+    IntegerColumn5: TIntegerColumn;
+    IntegerColumn6: TIntegerColumn;
+    IntegerColumn7: TIntegerColumn;
+    IntegerColumn8: TIntegerColumn;
+    IntegerColumn9: TIntegerColumn;
+    IntegerColumn10: TIntegerColumn;
+    IntegerColumn11: TIntegerColumn;
+    IntegerColumn12: TIntegerColumn;
+    IntegerColumn13: TIntegerColumn;
+    IntegerColumn14: TIntegerColumn;
+    procedure FormCreate(Sender: TObject);
+    procedure Grid2SetValue(Sender: TObject; const ACol, ARow: Integer;
+      const Value: TValue);
+    procedure Grid2GetValue(Sender: TObject; const ACol, ARow: Integer;
+      var Value: TValue);
+  private
+    { private 宣言 }
+    Data: Array of Array of TValue;
+    ColPos: Array of Integer;
+
+    //初期化処理
+    procedure InitProc;
+    //Grid初期化処理
+    procedure InitGrid;
+    procedure ViewportPositionChange1( Sender : TObject;
+     const OldPosition, NewPosition : TPointF; const Changed : Boolean );
+    procedure ViewportPositionChange2( Sender : TObject;
+     const OldPosition, NewPosition : TPointF; const Changed : Boolean );
+  public
+    { public 宣言 }
+  end;
+
+var
+  F_InputData: TF_InputData;
+
+implementation
+
+{$R *.fmx}
+
+//----------------------------------------------------------------------------//
+//  内部処理
+//----------------------------------------------------------------------------//
+//----------------------------------------------------------------------------//
+//  onCreate
+//----------------------------------------------------------------------------//
+procedure TF_InputData.FormCreate(Sender: TObject);
+begin
+  InitProc;
+end;
+
+//----------------------------------------------------------------------------//
+//  Gridに値を設定
+//----------------------------------------------------------------------------//
+procedure TF_InputData.Grid2SetValue(Sender: TObject; const ACol, ARow: Integer;
+  const Value: TValue);
+begin
+  Data[ACol, ARow] := Value;
+end;
+
+//----------------------------------------------------------------------------//
+//  Gridの値を取得
+//----------------------------------------------------------------------------//
+procedure TF_InputData.Grid2GetValue(Sender: TObject; const ACol, ARow: Integer;
+  var Value: TValue);
+begin
+  Value := Data[ACol, ARow];
+end;
+
+//----------------------------------------------------------------------------//
+//  外部処理
+//----------------------------------------------------------------------------//
+//----------------------------------------------------------------------------//
+//  初期化処理
+//----------------------------------------------------------------------------//
+procedure TF_InputData.InitProc;
+begin
+  //Grid初期化処理
+  InitGrid;
+end;
+
+//----------------------------------------------------------------------------//
+//  Grid初期化処理
+//----------------------------------------------------------------------------//
+procedure TF_InputData.InitGrid;
+begin
+  // Gridのスクロールバーを消去
+  Grid1.ShowScrollBars  := false;
+  Grid2.ShowScrollBars  := false;
+
+  // スクロール位置が変更になった時のメソッド割り当て
+  Grid1.OnViewportPositionChange := ViewportPositionChange1;
+  Grid2.OnViewportPositionChange := ViewportPositionChange2;
+end;
+
+//----------------------------------------------------------------------------//
+//  Gridのスクロール同期処理
+//----------------------------------------------------------------------------//
+procedure TF_InputData.ViewportPositionChange1( Sender : TObject;
+ const OldPosition, NewPosition : TPointF; const Changed : Boolean );
+begin
+  // 左TGridを動かしたら右TGridを動かす
+  Grid2.ViewportPosition := Grid1.ViewportPosition;
+end;
+
+procedure TF_InputData.ViewportPositionChange2( Sender : TObject;
+ const OldPosition, NewPosition : TPointF; const Changed : Boolean );
+begin
+  // 右TGridを動かしたら左TGridを動かす
+  Grid1.ViewportPosition := Grid2.ViewportPosition;
+end;
+
+end.

@@ -1,0 +1,8 @@
+[Tutorial: TGrid in business (Delphi DX 10.1 Berlin Up2) on Windows 10 and Android CAT S60]
+https://www.youtube.com/watch?v=lUsUSh0AYtk
+
+[TGridで列の固定]
+https://www.petitmonte.com/bbs/answers?question_id=29876
+
+[見た目をかっこよく]
+https://zenn.dev/pik/books/ddad3b8f35b11035752e/viewer/74870e

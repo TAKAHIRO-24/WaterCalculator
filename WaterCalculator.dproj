@@ -258,8 +258,19 @@
             <Form>F_Menu</Form>
             <FormType>fmx</FormType>
         </DCCReference>
+        <DCCReference Include="Manual.pas">
+            <Form>F_Manual</Form>
+            <FormType>fmx</FormType>
+        </DCCReference>
+        <DCCReference Include="InputData.pas">
+            <Form>F_InputData</Form>
+            <FormType>fmx</FormType>
+        </DCCReference>
+        <DCCReference Include="FormCreate.pas">
+            <Form>F_FormCreate</Form>
+        </DCCReference>
         <DCCReference Include="Control.pas">
-            <Form>Form1</Form>
+            <Form>F_Control</Form>
             <FormType>fmx</FormType>
         </DCCReference>
         <BuildConfiguration Include="Release">
