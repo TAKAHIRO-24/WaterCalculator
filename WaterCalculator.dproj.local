@@ -2,21 +2,22 @@
 <BorlandProject>
 	<Transactions>
     <Transaction>2022/02/06 10:47:38.000.454,=C:\Users\a_my_\Documents\GitHub\Repositories\Projects\Embarcadero\Projects\Unit1.pas</Transaction>
-    <Transaction>2022/02/06 10:48:25.000.600,C:\Users\a_my_\Documents\GitHub\Repositories\Projects\Embarcadero\Projects\Unit1.fmx=C:\Users\a_my_\Documents\GitHub\Repositories\Projects\Embarcadero\Projects\WaterCalculator\Menu.fmx</Transaction>
-    <Transaction>2022/02/06 10:48:25.000.600,C:\Users\a_my_\Documents\GitHub\Repositories\Projects\Embarcadero\Projects\Unit1.pas=C:\Users\a_my_\Documents\GitHub\Repositories\Projects\Embarcadero\Projects\WaterCalculator\Menu.pas</Transaction>
-    <Transaction>2022/02/06 10:48:32.000.330,C:\Users\a_my_\Documents\GitHub\Repositories\Projects\Embarcadero\Projects\Project1.dproj=C:\Users\a_my_\Documents\GitHub\Repositories\Projects\Embarcadero\Projects\WaterCalculator\WaterCalculator.dproj</Transaction>
-    <Transaction>2022/02/06 12:12:05.011,=C:\Users\a_my_\Documents\GitHub\Repositories\Projects\Embarcadero\Projects\WaterCalculator\Unit1.pas</Transaction>
-    <Transaction>2022/02/06 12:12:30.241,C:\Users\a_my_\Documents\GitHub\Repositories\Projects\Embarcadero\Projects\WaterCalculator\Control.fmx=C:\Users\a_my_\Documents\GitHub\Repositories\Projects\Embarcadero\Projects\WaterCalculator\Unit1.fmx</Transaction>
-    <Transaction>2022/02/06 12:12:30.241,C:\Users\a_my_\Documents\GitHub\Repositories\Projects\Embarcadero\Projects\WaterCalculator\Control.pas=C:\Users\a_my_\Documents\GitHub\Repositories\Projects\Embarcadero\Projects\WaterCalculator\Unit1.pas</Transaction>
-    <Transaction>2022/02/06 13:02:59.401,C:\Users\a_my_\Documents\GitHub\Repositories\Projects\Embarcadero\Projects\WaterCalculator\InputData.fmx=C:\Users\a_my_\Documents\GitHub\Repositories\Projects\Embarcadero\Projects\WaterCalculator\Control.fmx</Transaction>
-    <Transaction>2022/02/06 13:02:59.401,C:\Users\a_my_\Documents\GitHub\Repositories\Projects\Embarcadero\Projects\WaterCalculator\InputData.pas=C:\Users\a_my_\Documents\GitHub\Repositories\Projects\Embarcadero\Projects\WaterCalculator\Control.pas</Transaction>
-    <Transaction>2022/02/06 13:03:48.436,C:\Users\a_my_\Documents\GitHub\Repositories\Projects\Embarcadero\Projects\WaterCalculator\Manual.pas=C:\Users\a_my_\Documents\GitHub\Repositories\Projects\Embarcadero\Projects\WaterCalculator\InputData.pas</Transaction>
-    <Transaction>2022/02/06 13:03:48.436,C:\Users\a_my_\Documents\GitHub\Repositories\Projects\Embarcadero\Projects\WaterCalculator\Manual.fmx=C:\Users\a_my_\Documents\GitHub\Repositories\Projects\Embarcadero\Projects\WaterCalculator\InputData.fmx</Transaction>
-    <Transaction>2022/02/06 13:04:23.869,C:\Users\a_my_\Documents\GitHub\Repositories\Projects\Embarcadero\Projects\WaterCalculator\FormCreate.fmx=C:\Users\a_my_\Documents\GitHub\Repositories\Projects\Embarcadero\Projects\WaterCalculator\Manual.fmx</Transaction>
-    <Transaction>2022/02/06 13:04:23.869,C:\Users\a_my_\Documents\GitHub\Repositories\Projects\Embarcadero\Projects\WaterCalculator\FormCreate.pas=C:\Users\a_my_\Documents\GitHub\Repositories\Projects\Embarcadero\Projects\WaterCalculator\Manual.pas</Transaction>
-    <Transaction>2022/02/06 13:04:43.831,=C:\Users\a_my_\Documents\GitHub\Repositories\Projects\Embarcadero\Projects\WaterCalculator\Manual.pas</Transaction>
-    <Transaction>2022/02/06 13:04:55.152,=C:\Users\a_my_\Documents\GitHub\Repositories\Projects\Embarcadero\Projects\WaterCalculator\InputData.pas</Transaction>
-    <Transaction>2022/02/06 13:05:00.662,=C:\Users\a_my_\Documents\GitHub\Repositories\Projects\Embarcadero\Projects\WaterCalculator\Control.pas</Transaction>
+    <Transaction>2022/02/06 10:48:25.000.600,C:\Users\a_my_\Documents\GitHub\Repositories\Projects\Embarcadero\Projects\WaterCalculator\Menu.pas=C:\Users\a_my_\Documents\GitHub\Repositories\Projects\Embarcadero\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/02/06 10:48:25.000.600,C:\Users\a_my_\Documents\GitHub\Repositories\Projects\Embarcadero\Projects\WaterCalculator\Menu.fmx=C:\Users\a_my_\Documents\GitHub\Repositories\Projects\Embarcadero\Projects\Unit1.fmx</Transaction>
+    <Transaction>2022/02/06 10:48:32.000.330,C:\Users\a_my_\Documents\GitHub\Repositories\Projects\Embarcadero\Projects\WaterCalculator\WaterCalculator.dproj=C:\Users\a_my_\Documents\GitHub\Repositories\Projects\Embarcadero\Projects\Project1.dproj</Transaction>
+    <Transaction>2022/02/06 12:12:05.000.011,=C:\Users\a_my_\Documents\GitHub\Repositories\Projects\Embarcadero\Projects\WaterCalculator\Unit1.pas</Transaction>
+    <Transaction>2022/02/06 12:12:30.000.241,C:\Users\a_my_\Documents\GitHub\Repositories\Projects\Embarcadero\Projects\WaterCalculator\Unit1.pas=C:\Users\a_my_\Documents\GitHub\Repositories\Projects\Embarcadero\Projects\WaterCalculator\Control.pas</Transaction>
+    <Transaction>2022/02/06 12:12:30.000.241,C:\Users\a_my_\Documents\GitHub\Repositories\Projects\Embarcadero\Projects\WaterCalculator\Unit1.fmx=C:\Users\a_my_\Documents\GitHub\Repositories\Projects\Embarcadero\Projects\WaterCalculator\Control.fmx</Transaction>
+    <Transaction>2022/02/06 13:02:59.000.401,C:\Users\a_my_\Documents\GitHub\Repositories\Projects\Embarcadero\Projects\WaterCalculator\Control.pas=C:\Users\a_my_\Documents\GitHub\Repositories\Projects\Embarcadero\Projects\WaterCalculator\InputData.pas</Transaction>
+    <Transaction>2022/02/06 13:02:59.000.401,C:\Users\a_my_\Documents\GitHub\Repositories\Projects\Embarcadero\Projects\WaterCalculator\Control.fmx=C:\Users\a_my_\Documents\GitHub\Repositories\Projects\Embarcadero\Projects\WaterCalculator\InputData.fmx</Transaction>
+    <Transaction>2022/02/06 13:03:48.000.436,C:\Users\a_my_\Documents\GitHub\Repositories\Projects\Embarcadero\Projects\WaterCalculator\InputData.fmx=C:\Users\a_my_\Documents\GitHub\Repositories\Projects\Embarcadero\Projects\WaterCalculator\Manual.fmx</Transaction>
+    <Transaction>2022/02/06 13:03:48.000.436,C:\Users\a_my_\Documents\GitHub\Repositories\Projects\Embarcadero\Projects\WaterCalculator\InputData.pas=C:\Users\a_my_\Documents\GitHub\Repositories\Projects\Embarcadero\Projects\WaterCalculator\Manual.pas</Transaction>
+    <Transaction>2022/02/06 13:04:23.000.869,C:\Users\a_my_\Documents\GitHub\Repositories\Projects\Embarcadero\Projects\WaterCalculator\Manual.fmx=C:\Users\a_my_\Documents\GitHub\Repositories\Projects\Embarcadero\Projects\WaterCalculator\FormCreate.fmx</Transaction>
+    <Transaction>2022/02/06 13:04:23.000.869,C:\Users\a_my_\Documents\GitHub\Repositories\Projects\Embarcadero\Projects\WaterCalculator\Manual.pas=C:\Users\a_my_\Documents\GitHub\Repositories\Projects\Embarcadero\Projects\WaterCalculator\FormCreate.pas</Transaction>
+    <Transaction>2022/02/06 13:04:43.000.831,=C:\Users\a_my_\Documents\GitHub\Repositories\Projects\Embarcadero\Projects\WaterCalculator\Manual.pas</Transaction>
+    <Transaction>2022/02/06 13:04:55.000.152,=C:\Users\a_my_\Documents\GitHub\Repositories\Projects\Embarcadero\Projects\WaterCalculator\InputData.pas</Transaction>
+    <Transaction>2022/02/06 13:05:00.000.662,=C:\Users\a_my_\Documents\GitHub\Repositories\Projects\Embarcadero\Projects\WaterCalculator\Control.pas</Transaction>
+    <Transaction>2022/02/06 17:40:56.640,=C:\Users\a_my_\Documents\GitHub\Repositories\Projects\Embarcadero\Projects\WaterCalculator\Kyotu.pas</Transaction>
   </Transactions>
 	<ActiveMobileDevice>
 		<NoProfile iOSSimulator="iPhone5"/>
