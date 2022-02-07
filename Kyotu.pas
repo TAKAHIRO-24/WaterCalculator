@@ -3,12 +3,14 @@ unit Kyotu;
 interface
 
 uses
-  System.SysUtils, IniFiles;
+  System.SysUtils, IniFiles, System.Classes, FMX.Controls;
 
   //IniFile読み取り
   procedure GetIniFile;
   //IniFile書き込み
   procedure SetIniFile;
+  //フォーカス移動
+  procedure DelayedSetFocus(control: TControl);
   //和暦変換
   function ChangeToWareki(year: Integer): String;
 
@@ -71,7 +73,28 @@ begin
 end;
 
 //----------------------------------------------------------------------------//
+//  フォーカス移動
+//  引数　：　コンポーネント
+//----------------------------------------------------------------------------//
+procedure DelayedSetFocus(control: TControl);
+begin
+  TThread.CreateAnonymousThread(
+    procedure
+    begin
+      TThread.Synchronize(nil,
+        procedure
+        begin
+          control.SetFocus;
+        end
+      );
+    end
+  ).Start;
+end;
+
+//----------------------------------------------------------------------------//
 //  和暦変換
+//  引数　： 西暦年（2021）
+//  戻値　：　和暦年（令和03）
 //----------------------------------------------------------------------------//
 function ChangeToWareki(year: Integer): String;
 var

@@ -11,6 +11,7 @@ object F_InputData: TF_InputData
   FormFactor.Devices = [Desktop]
   OnCreate = FormCreate
   OnKeyDown = FormKeyDown
+  OnFocusChanged = FormFocusChanged
   DesignerMasterStyle = 0
   object StyleBook1: TStyleBook
     Styles = <
@@ -26955,19 +26956,19 @@ object F_InputData: TF_InputData
       ControlCollection = <
         item
           Column = 0
-          Control = Grid1
+          ColumnSpan = 2
+          Control = Panel1
+          Row = 0
+        end
+        item
+          Column = 0
+          Control = StringGrid1
           Row = 1
         end
         item
           Column = 1
-          Control = Grid2
+          Control = StringGrid2
           Row = 1
-        end
-        item
-          Column = 0
-          ColumnSpan = 2
-          Control = Panel1
-          Row = 0
         end>
       RowCollection = <
         item
@@ -26975,108 +26976,25 @@ object F_InputData: TF_InputData
         end
         item
           Value = 83.892617449664400000
+        end
+        item
+          SizeStyle = Auto
         end>
-      object Grid1: TGrid
-        Align = Client
-        CanFocus = True
-        ClipChildren = True
-        Size.Width = 194.652175903320300000
-        Size.Height = 545.302001953125000000
-        Size.PlatformDefault = False
-        TabOrder = 0
-        RowCount = 28
-        Options = [ColumnResize, ColumnMove, ColLines, RowLines, Tabs, Header, HeaderClick, AutoDisplacement]
-        Viewport.Width = 174.700000000000000000
-        Viewport.Height = 520.300000000000000000
-        object IntegerColumn1: TIntegerColumn
-          Header = #37096#23627#30058#21495
-          Size.Width = 73.000000000000000000
-        end
-        object StringColumn1: TStringColumn
-          Header = #21033#29992#32773
-        end
-      end
-      object Grid2: TGrid
-        Align = Client
-        CanFocus = True
-        ClipChildren = True
-        Size.Width = 804.347839355468800000
-        Size.Height = 545.302001953125000000
-        Size.PlatformDefault = False
-        TabOrder = 3
-        RowCount = 28
-        OnGetValue = Grid2GetValue
-        OnSetValue = Grid2SetValue
-        Viewport.Width = 784.300000000000000000
-        Viewport.Height = 504.300000000000000000
-        object IntegerColumn14: TIntegerColumn
-          Header = #65299#26376
-          Size.Width = 61.000000000000000000
-        end
-        object IntegerColumn2: TIntegerColumn
-          Header = #65300#26376
-          Size.Width = 61.000000000000000000
-        end
-        object IntegerColumn3: TIntegerColumn
-          Header = #65301#26376
-          Size.Width = 61.000000000000000000
-        end
-        object IntegerColumn4: TIntegerColumn
-          Header = #65302#26376
-          Size.Width = 61.000000000000000000
-        end
-        object IntegerColumn5: TIntegerColumn
-          Header = #65303#26376
-          Size.Width = 61.000000000000000000
-        end
-        object IntegerColumn6: TIntegerColumn
-          Header = #65304#26376
-          Size.Width = 61.000000000000000000
-        end
-        object IntegerColumn7: TIntegerColumn
-          Header = #65305#26376
-          Size.Width = 61.000000000000000000
-        end
-        object IntegerColumn8: TIntegerColumn
-          Header = #65297#65296#26376
-          Size.Width = 61.000000000000000000
-        end
-        object IntegerColumn9: TIntegerColumn
-          Header = #65297#65297#26376
-          Size.Width = 61.000000000000000000
-        end
-        object IntegerColumn10: TIntegerColumn
-          Header = #65297#65298#26376
-          Size.Width = 61.000000000000000000
-        end
-        object IntegerColumn11: TIntegerColumn
-          Header = #65297#26376
-          Size.Width = 61.000000000000000000
-        end
-        object IntegerColumn12: TIntegerColumn
-          Header = #65298#26376
-          Size.Width = 61.000000000000000000
-        end
-        object IntegerColumn13: TIntegerColumn
-          Header = #65299#26376
-          Size.Width = 61.000000000000000000
-        end
-      end
       object Panel1: TPanel
         Align = Client
         Size.Width = 999.000000000000000000
         Size.Height = 104.697982788085900000
         Size.PlatformDefault = False
-        TabOrder = 1
+        TabOrder = 0
         object et_year: TEdit
           Touch.InteractiveGestures = [LongTap, DoubleTap]
-          TabOrder = 0
+          TabOrder = 1
           KeyboardType = NumberPad
           MaxLength = 4
           FilterChar = '0123456789'
           TextSettings.Font.Size = 20.000000000000000000
           TextSettings.HorzAlign = Center
-          Position.X = 144.000000000000000000
+          Position.X = 208.000000000000000000
           Position.Y = 24.000000000000000000
           Size.Width = 70.000000000000000000
           Size.Height = 30.000000000000000000
@@ -27087,7 +27005,7 @@ object F_InputData: TF_InputData
         end
         object lb_nendo: TLabel
           StyledSettings = [Family, Style, FontColor]
-          Position.X = 224.000000000000000000
+          Position.X = 288.000000000000000000
           Position.Y = 24.000000000000000000
           Size.Width = 50.000000000000000000
           Size.Height = 30.000000000000000000
@@ -27095,39 +27013,39 @@ object F_InputData: TF_InputData
           TextSettings.Font.Size = 20.000000000000000000
           TextSettings.HorzAlign = Center
           Text = #24180#24230
-          TabOrder = 2
+          TabOrder = 8
         end
         object lb_period1: TLabel
-          Position.X = 64.000000000000000000
+          Position.X = 128.000000000000000000
           Position.Y = 64.000000000000000000
           Size.Width = 97.000000000000000000
           Size.Height = 17.000000000000000000
           Size.PlatformDefault = False
           TextSettings.HorzAlign = Trailing
           Text = #20196#21644'99'#24180'99'#26376
-          TabOrder = 5
+          TabOrder = 11
         end
         object lb_period0: TLabel
-          Position.X = 173.000000000000000000
+          Position.X = 237.000000000000000000
           Position.Y = 64.000000000000000000
           Size.Width = 15.000000000000000000
           Size.Height = 17.000000000000000000
           Size.PlatformDefault = False
           Text = #65374
-          TabOrder = 3
+          TabOrder = 9
         end
         object lb_period2: TLabel
-          Position.X = 198.000000000000000000
+          Position.X = 262.000000000000000000
           Position.Y = 64.000000000000000000
           Size.Width = 97.000000000000000000
           Size.Height = 17.000000000000000000
           Size.PlatformDefault = False
           Text = #20196#21644'99'#24180'99'#26376
-          TabOrder = 4
+          TabOrder = 10
         end
         object lb_nengo: TLabel
           StyledSettings = [Family, Style, FontColor]
-          Position.X = 85.000000000000000000
+          Position.X = 149.000000000000000000
           Position.Y = 24.000000000000000000
           Size.Width = 50.000000000000000000
           Size.Height = 30.000000000000000000
@@ -27135,30 +27053,156 @@ object F_InputData: TF_InputData
           TextSettings.Font.Size = 20.000000000000000000
           TextSettings.HorzAlign = Center
           Text = #20196#21644
-          TabOrder = 1
+          TabOrder = 7
         end
-        object Panel2: TPanel
-          Align = Right
-          Position.X = 750.000000000000000000
-          Size.Width = 249.000000000000000000
-          Size.Height = 104.697982788085900000
+        object bt_cansel: TButton
+          Position.X = 776.000000000000000000
+          Position.Y = 29.000000000000000000
+          TabOrder = 4
+          Text = 'F3:'#12461#12515#12531#12475#12523
+          OnClick = bt_canselClick
+        end
+        object bt_file: TButton
+          Position.X = 376.000000000000000000
+          Position.Y = 29.000000000000000000
+          TabOrder = 2
+          Text = 'F6:'#12501#12449#12452#12523#36984#25246
+          OnClick = bt_fileClick
+        end
+        object bt_record: TButton
+          Position.X = 880.000000000000000000
+          Position.Y = 29.000000000000000000
+          TabOrder = 5
+          Text = 'F9:'#35352#37682
+        end
+        object sw_update: TSwitch
+          IsChecked = False
+          Position.X = 88.000000000000000000
+          Position.Y = 29.000000000000000000
+          Size.Width = 40.000000000000000000
+          Size.Height = 20.000000000000000000
           Size.PlatformDefault = False
+          TabOrder = 0
+          OnSwitch = sw_updateSwitch
+        end
+        object lb_update: TLabel
+          StyledSettings = [Family, Style, FontColor]
+          Position.X = 29.000000000000000000
+          Position.Y = 24.000000000000000000
+          Size.Width = 50.000000000000000000
+          Size.Height = 30.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 20.000000000000000000
+          TextSettings.HorzAlign = Center
+          Text = #26032#35215
           TabOrder = 6
-          object bt_cansel: TButton
-            Position.X = 40.000000000000000000
-            Position.Y = 40.000000000000000000
-            TabOrder = 0
-            Text = 'F3:'#12461#12515#12531#12475#12523
-            OnClick = bt_canselClick
-          end
-          object bt_record: TButton
-            Position.X = 136.000000000000000000
-            Position.Y = 40.000000000000000000
-            TabOrder = 1
-            Text = 'F9:'#35352#37682
-          end
+        end
+        object et_path: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 12
+          ReadOnly = True
+          Position.X = 376.000000000000000000
+          Position.Y = 56.000000000000000000
+          Size.Width = 377.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+        end
+        object bt_datadisp: TButton
+          Position.X = 480.000000000000000000
+          Position.Y = 29.000000000000000000
+          TabOrder = 3
+          Text = 'F7:'#12487#12540#12479#25277#20986
+          OnClick = bt_datadispClick
+        end
+      end
+      object StringGrid1: TStringGrid
+        Align = Client
+        CanFocus = True
+        ClipChildren = True
+        Size.Width = 194.652175903320300000
+        Size.Height = 545.302001953125000000
+        Size.PlatformDefault = False
+        TabOrder = 4
+        RowCount = 28
+        Viewport.Width = 174.700000000000000000
+        Viewport.Height = 520.300000000000000000
+        object IntegerColumn1: TIntegerColumn
+          Header = #37096#23627#30058#21495
+          Size.Width = 57.000000000000000000
+        end
+        object StringColumn1: TStringColumn
+          Header = #21033#29992#32773
+          Size.Width = 115.000000000000000000
+        end
+      end
+      object StringGrid2: TStringGrid
+        Align = Client
+        CanFocus = True
+        ClipChildren = True
+        Size.Width = 804.347839355468800000
+        Size.Height = 545.302001953125000000
+        Size.PlatformDefault = False
+        TabOrder = 5
+        RowCount = 28
+        Viewport.Width = 784.300000000000000000
+        Viewport.Height = 504.300000000000000000
+        object IntegerColumn2: TIntegerColumn
+          Header = '3'#26376
+          Size.Width = 60.000000000000000000
+        end
+        object IntegerColumn3: TIntegerColumn
+          Header = '4'#26376
+          Size.Width = 60.000000000000000000
+        end
+        object IntegerColumn4: TIntegerColumn
+          Header = '5'#26376
+          Size.Width = 60.000000000000000000
+        end
+        object IntegerColumn5: TIntegerColumn
+          Header = '6'#26376
+          Size.Width = 60.000000000000000000
+        end
+        object IntegerColumn6: TIntegerColumn
+          Header = '7'#26376
+          Size.Width = 60.000000000000000000
+        end
+        object IntegerColumn7: TIntegerColumn
+          Header = '8'#26376
+          Size.Width = 60.000000000000000000
+        end
+        object IntegerColumn8: TIntegerColumn
+          Header = '9'#26376
+          Size.Width = 60.000000000000000000
+        end
+        object IntegerColumn9: TIntegerColumn
+          Header = '10'#26376
+          Size.Width = 60.000000000000000000
+        end
+        object IntegerColumn10: TIntegerColumn
+          Header = '11'#26376
+          Size.Width = 60.000000000000000000
+        end
+        object IntegerColumn11: TIntegerColumn
+          Header = '12'#26376
+          Size.Width = 60.000000000000000000
+        end
+        object IntegerColumn12: TIntegerColumn
+          Header = '1'#26376
+          Size.Width = 60.000000000000000000
+        end
+        object IntegerColumn13: TIntegerColumn
+          Header = '2'#26376
+          Size.Width = 60.000000000000000000
+        end
+        object IntegerColumn14: TIntegerColumn
+          Header = '3'#26376
+          Size.Width = 60.000000000000000000
         end
       end
     end
+  end
+  object OpenDialog1: TOpenDialog
+    Left = 968
+    Top = 584
   end
 end
