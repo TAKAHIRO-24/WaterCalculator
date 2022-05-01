@@ -775,6 +775,7 @@ end;
 procedure TF_InputData.InputCsvData;
 var
   R, C: Integer;
+  CurrentRow: Integer;
   TempValue: String;
   ExcelApp: Olevariant;
   ExcelBook: Olevariant;
@@ -790,20 +791,31 @@ begin
         //配列初期化(部屋番号、3月～3月を保存)
         SetLength(GridData, 14, 28);
 
+        //現在行初期化
+        CurrentRow := 0;
+
         for R := Low(outputPos[0]) to High(outputPos[0]) do
         begin
+//          if (outputPos[0,R] <> ExcelSheet.range[outputPos[0,CurrentRow]].Value) then
+          if (outputPos[0,R] <> ExcelSheet.range['A'+IntToStr(CurrentRow)].Value) then
+          begin
+            //部屋番号が異なる場合、outputPosを読み飛ばす
+//            Inc(CurrentRow);
+            Continue;
+          end;
+
           for C := Low(outputPos) to High(outputPos) do
           begin
-            //部屋番号
             if (C = 0) then
-            begin
+            begin  //部屋番号
               GridData[C,R] := outputPos[C,R];
             end
             else
             begin
-              GridData[C,R] := ExcelSheet.range[outputPos[C,R]].Value;
+              GridData[C,R] := ExcelSheet.range[outputPos[C,CurrentRow]].Value;
             end;
           end;
+          Inc(CurrentRow);
         end;
       finally
         ExcelSheet := unAssigned;
@@ -824,23 +836,29 @@ procedure TF_InputData.InputCsvDataDisp;
 var
   i: Integer;
   R, C: Integer;
+  CurrentRow: Integer;
 begin
+
+  //現在行初期化
+  CurrentRow := 0;
 
   for i := 0 to StringGrid1.RowCount - 1 do
   begin
     for R := Low(GridData[0]) to High(GridData[0]) do
     begin
       //部屋番号が一致するGrid個所に表示する
-      if (StringGrid1.Cells[1,i] <> GridData[0,R]) then
+      if (StringGrid1.Cells[1,i] <> GridData[0,CurrentRow]) then
       begin
+        Inc(CurrentRow);
         Continue;
       end;
 
       //部屋番号が一致するGridが見つかった場合は、Gridに列の値を保存
       for C := 1 to High(GridData) do
       begin
-        StringGrid2.Cells[C-1,R] := GridData[C,R];
+        StringGrid2.Cells[C-1,R] := GridData[C,CurrentRow];
       end;
+      Inc(CurrentRow);
     end;
   end;
 end;
