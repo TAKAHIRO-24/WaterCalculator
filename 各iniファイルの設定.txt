@@ -1,0 +1,547 @@
+;---------------------------------------------------------------------------
+;  RoomOwner.ini
+;---------------------------------------------------------------------------;
+;以下の設定は、201号室をサンプル１が使用しているという意味。
+;
+;[部屋番号]
+;room00 = 201
+;[利用者]
+;owner00 = サンプル１
+;[年間水道料入金額]
+;deposit00 = 42000
+;
+;---------------------------------------------------------------------------;
+
+[部屋番号]
+room00 = 201
+room01 = 202
+room02 = 203
+room03 = 205
+room04 = 301
+room05 = 302
+room06 = 303
+room07 = 305
+room08 = 401
+room09 = 402
+room10 = 403
+room11 = 405
+room12 = 501
+room13 = 502
+room14 = 503
+room15 = 505
+room16 = 601
+room17 = 602
+room18 = 603
+room19 = 605
+room20 = 701
+room21 = 702
+room22 = 703
+room23 = 705
+room24 = 801
+room25 = 802
+room26 = 803
+room27 = 805
+
+[利用者]
+owner00 = 利用者201
+owner01 = 利用者202
+owner02 = 利用者203
+owner03 = 利用者205
+owner04 = 利用者301
+owner05 = 利用者302
+owner06 = 利用者303
+owner07 = 利用者305
+owner08 = 利用者401
+owner09 = 利用者402
+owner10 = 利用者403
+owner11 = 利用者405
+owner12 = 利用者501
+owner13 = 利用者502
+owner14 = 利用者503
+owner15 = 利用者505
+owner16 = 利用者601
+owner17 = 利用者602
+owner18 = 利用者603
+owner19 = 利用者605
+owner20 = 利用者701
+owner21 = 利用者702
+owner22 = 利用者703
+owner23 = 利用者705
+owner24 = 利用者801
+owner25 = 利用者802
+owner26 = 利用者803
+owner27 = 利用者805
+
+[年間水道料入金額]
+deposit00 = 42000
+deposit01 = 42000
+deposit02 = 42000
+deposit03 = 42000
+deposit04 = 42000
+deposit05 = 42000
+deposit06 = 42000
+deposit07 = 42000
+deposit08 = 42000
+deposit09 = 42000
+deposit10 = 42000
+deposit11 = 42000
+deposit12 = 42000
+deposit13 = 42000
+deposit14 = 42000
+deposit15 = 42000
+deposit16 = 42000
+deposit17 = 42000
+deposit18 = 42000
+deposit19 = 42000
+deposit20 = 42000
+deposit21 = 42000
+deposit22 = 42000
+deposit23 = 42000
+deposit24 = 42000
+deposit25 = 42000
+deposit26 = 42000
+deposit27 = 42000
+
+
+;---------------------------------------------------------------------------
+;  OutputPos.ini
+;---------------------------------------------------------------------------;
+;以下の設定は、[部屋00]：201号室のデータ出力先が、3月：C2, 4月：D2...となっているということ。
+;
+;[部屋00]  --201号室
+;month00 = C2  --3月
+;month01 = D2  --4月
+;month02 = E2  --5月
+;...
+;month11 = N2  --2月
+;month12 = O2  --3月
+;
+;[部屋27]  --805号室
+;month00 = C3  --3月
+;month01 = D3  --4月
+;month02 = E3  --5月
+;...
+;month11 = N3  --2月
+;month12 = O3  --3月
+;
+;---------------------------------------------------------------------------;
+
+[部屋00]
+month00 = C2
+month01 = D2
+month02 = E2
+month03 = F2
+month04 = G2
+month05 = H2
+month06 = I2
+month07 = J2
+month08 = K2
+month09 = L2
+month10 = M2
+month11 = N2
+month12 = O2
+
+[部屋01]
+month00 = C3
+month01 = D3
+month02 = E3
+month03 = F3
+month04 = G3
+month05 = H3
+month06 = I3
+month07 = J3
+month08 = K3
+month09 = L3
+month10 = M3
+month11 = N3
+month12 = O3
+
+[部屋02]
+month00 = C4
+month01 = D4
+month02 = E4
+month03 = F4
+month04 = G4
+month05 = H4
+month06 = I4
+month07 = J4
+month08 = K4
+month09 = L4
+month10 = M4
+month11 = N4
+month12 = O4
+
+[部屋03]
+month00 = C5
+month01 = D5
+month02 = E5
+month03 = F5
+month04 = G5
+month05 = H5
+month06 = I5
+month07 = J5
+month08 = K5
+month09 = L5
+month10 = M5
+month11 = N5
+month12 = O5
+
+[部屋04]
+month00 = C6
+month01 = D6
+month02 = E6
+month03 = F6
+month04 = G6
+month05 = H6
+month06 = I6
+month07 = J6
+month08 = K6
+month09 = L6
+month10 = M6
+month11 = N6
+month12 = O6
+
+[部屋05]
+month00 = C7
+month01 = D7
+month02 = E7
+month03 = F7
+month04 = G7
+month05 = H7
+month06 = I7
+month07 = J7
+month08 = K7
+month09 = L7
+month10 = M7
+month11 = N7
+month12 = O7
+
+[部屋06]
+month00 = C8
+month01 = D8
+month02 = E8
+month03 = F8
+month04 = G8
+month05 = H8
+month06 = I8
+month07 = J8
+month08 = K8
+month09 = L8
+month10 = M8
+month11 = N8
+month12 = O8
+
+[部屋07]
+month00 = C9
+month01 = D9
+month02 = E9
+month03 = F9
+month04 = G9
+month05 = H9
+month06 = I9
+month07 = J9
+month08 = K9
+month09 = L9
+month10 = M9
+month11 = N9
+month12 = O9
+
+[部屋08]
+month00 = C10
+month01 = D10
+month02 = E10
+month03 = F10
+month04 = G10
+month05 = H10
+month06 = I10
+month07 = J10
+month08 = K10
+month09 = L10
+month10 = M10
+month11 = N10
+month12 = O10
+
+[部屋09]
+month00 = C11
+month01 = D11
+month02 = E11
+month03 = F11
+month04 = G11
+month05 = H11
+month06 = I11
+month07 = J11
+month08 = K11
+month09 = L11
+month10 = M11
+month11 = N11
+month12 = O11
+
+[部屋10]
+month00 = C12
+month01 = D12
+month02 = E12
+month03 = F12
+month04 = G12
+month05 = H12
+month06 = I12
+month07 = J12
+month08 = K12
+month09 = L12
+month10 = M12
+month11 = N12
+month12 = O12
+
+[部屋11]
+month00 = C13
+month01 = D13
+month02 = E13
+month03 = F13
+month04 = G13
+month05 = H13
+month06 = I13
+month07 = J13
+month08 = K13
+month09 = L13
+month10 = M13
+month11 = N13
+month12 = O13
+
+[部屋12]
+month00 = C14
+month01 = D14
+month02 = E14
+month03 = F14
+month04 = G14
+month05 = H14
+month06 = I14
+month07 = J14
+month08 = K14
+month09 = L14
+month10 = M14
+month11 = N14
+month12 = O14
+
+[部屋13]
+month00 = C15
+month01 = D15
+month02 = E15
+month03 = F15
+month04 = G15
+month05 = H15
+month06 = I15
+month07 = J15
+month08 = K15
+month09 = L15
+month10 = M15
+month11 = N15
+month12 = O15
+
+[部屋14]
+month00 = C16
+month01 = D16
+month02 = E16
+month03 = F16
+month04 = G16
+month05 = H16
+month06 = I16
+month07 = J16
+month08 = K16
+month09 = L16
+month10 = M16
+month11 = N16
+month12 = O16
+
+[部屋15]
+month00 = C17
+month01 = D17
+month02 = E17
+month03 = F17
+month04 = G17
+month05 = H17
+month06 = I17
+month07 = J17
+month08 = K17
+month09 = L17
+month10 = M17
+month11 = N17
+month12 = O17
+
+[部屋16]
+month00 = C18
+month01 = D18
+month02 = E18
+month03 = F18
+month04 = G18
+month05 = H18
+month06 = I18
+month07 = J18
+month08 = K18
+month09 = L18
+month10 = M18
+month11 = N18
+month12 = O18
+
+[部屋17]
+month00 = C19
+month01 = D19
+month02 = E19
+month03 = F19
+month04 = G19
+month05 = H19
+month06 = I19
+month07 = J19
+month08 = K19
+month09 = L19
+month10 = M19
+month11 = N19
+month12 = O19
+
+[部屋18]
+month00 = C20
+month01 = D20
+month02 = E20
+month03 = F20
+month04 = G20
+month05 = H20
+month06 = I20
+month07 = J20
+month08 = K20
+month09 = L20
+month10 = M20
+month11 = N20
+month12 = O20
+
+[部屋19]
+month00 = C21
+month01 = D21
+month02 = E21
+month03 = F21
+month04 = G21
+month05 = H21
+month06 = I21
+month07 = J21
+month08 = K21
+month09 = L21
+month10 = M21
+month11 = N21
+month12 = O21
+
+[部屋20]
+month00 = C22
+month01 = D22
+month02 = E22
+month03 = F22
+month04 = G22
+month05 = H22
+month06 = I22
+month07 = J22
+month08 = K22
+month09 = L22
+month10 = M22
+month11 = N22
+month12 = O22
+
+[部屋21]
+month00 = C23
+month01 = D23
+month02 = E23
+month03 = F23
+month04 = G23
+month05 = H23
+month06 = I23
+month07 = J23
+month08 = K23
+month09 = L23
+month10 = M23
+month11 = N23
+month12 = O23
+
+[部屋22]
+month00 = C24
+month01 = D24
+month02 = E24
+month03 = F24
+month04 = G24
+month05 = H24
+month06 = I24
+month07 = J24
+month08 = K24
+month09 = L24
+month10 = M24
+month11 = N24
+month12 = O24
+
+[部屋23]
+month00 = C25
+month01 = D25
+month02 = E25
+month03 = F25
+month04 = G25
+month05 = H25
+month06 = I25
+month07 = J25
+month08 = K25
+month09 = L25
+month10 = M25
+month11 = N25
+month12 = O25
+
+[部屋24]
+month00 = C26
+month01 = D26
+month02 = E26
+month03 = F26
+month04 = G26
+month05 = H26
+month06 = I26
+month07 = J26
+month08 = K26
+month09 = L26
+month10 = M26
+month11 = N26
+month12 = O26
+
+[部屋25]
+month00 = C27
+month01 = D27
+month02 = E27
+month03 = F27
+month04 = G27
+month05 = H27
+month06 = I27
+month07 = J27
+month08 = K27
+month09 = L27
+month10 = M27
+month11 = N27
+month12 = O27
+
+[部屋26]
+month00 = C28
+month01 = D28
+month02 = E28
+month03 = F28
+month04 = G28
+month05 = H28
+month06 = I28
+month07 = J28
+month08 = K28
+month09 = L28
+month10 = M28
+month11 = N28
+month12 = O28
+
+[部屋27]
+month00 = C29
+month01 = D29
+month02 = E29
+month03 = F29
+month04 = G29
+month05 = H29
+month06 = I29
+month07 = J29
+month08 = K29
+month09 = L29
+month10 = M29
+month11 = N29
+month12 = O29

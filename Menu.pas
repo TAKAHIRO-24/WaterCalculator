@@ -39,7 +39,7 @@ var
 implementation
 
 uses
-  Manual, InputData, FormCreate, Control;
+  Manual, InputData, FormCreate, Control, Kyotu;
 
 {$R *.fmx}
 
@@ -167,6 +167,9 @@ end;
 //----------------------------------------------------------------------------//
 procedure TF_Menu.InitProc;
 begin
+  //IniFileì«Ç›çûÇ›
+  GetIniFile;
+
   //ï\é¶ÅEîÒï\é¶êßå‰
   mm_Manual.Visible := False;
   mm_InputData.Visible := False;

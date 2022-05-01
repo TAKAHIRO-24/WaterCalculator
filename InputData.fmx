@@ -3,13 +3,14 @@ object F_InputData: TF_InputData
   Top = 0
   Caption = #12487#12540#12479#20837#21147
   ClientHeight = 650
-  ClientWidth = 999
+  ClientWidth = 1029
   Position = ScreenCenter
   StyleBook = StyleBook1
   FormFactor.Width = 320
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
   OnCreate = FormCreate
+  OnClose = FormClose
   OnKeyDown = FormKeyDown
   OnFocusChanged = FormFocusChanged
   DesignerMasterStyle = 0
@@ -26935,23 +26936,23 @@ object F_InputData: TF_InputData
   end
   object ScaledLayout1: TScaledLayout
     Align = Client
-    OriginalWidth = 999.000000000000000000
+    OriginalWidth = 1029.000000000000000000
     OriginalHeight = 650.000000000000000000
-    Size.Width = 999.000000000000000000
+    Size.Width = 1029.000000000000000000
     Size.Height = 650.000000000000000000
     Size.PlatformDefault = False
     object GridPanelLayout1: TGridPanelLayout
       Align = Client
-      Size.Width = 999.000000000000000000
+      Size.Width = 1029.000000000000000000
       Size.Height = 650.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 0
       ColumnCollection = <
         item
-          Value = 19.484702093397740000
+          Value = 22.218938132943390000
         end
         item
-          Value = 80.515297906602260000
+          Value = 77.781061867056610000
         end>
       ControlCollection = <
         item
@@ -26982,7 +26983,7 @@ object F_InputData: TF_InputData
         end>
       object Panel1: TPanel
         Align = Client
-        Size.Width = 999.000000000000000000
+        Size.Width = 1029.000000000000000000
         Size.Height = 104.697982788085900000
         Size.PlatformDefault = False
         TabOrder = 0
@@ -27001,6 +27002,7 @@ object F_InputData: TF_InputData
           Size.PlatformDefault = False
           StyledSettings = [Family, Style, FontColor]
           CharCase = ecUpperCase
+          OnTyping = et_yearTyping
           OnExit = et_yearExit
         end
         object lb_nendo: TLabel
@@ -27074,6 +27076,7 @@ object F_InputData: TF_InputData
           Position.Y = 29.000000000000000000
           TabOrder = 5
           Text = 'F9:'#35352#37682
+          OnClick = bt_recordClick
         end
         object sw_update: TSwitch
           IsChecked = False
@@ -27083,6 +27086,7 @@ object F_InputData: TF_InputData
           Size.Height = 20.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 0
+          OnExit = sw_updateExit
           OnSwitch = sw_updateSwitch
         end
         object lb_update: TLabel
@@ -27119,19 +27123,28 @@ object F_InputData: TF_InputData
         Align = Client
         CanFocus = True
         ClipChildren = True
-        Size.Width = 194.652175903320300000
+        Size.Width = 228.632873535156300000
         Size.Height = 545.302001953125000000
         Size.PlatformDefault = False
-        TabOrder = 4
+        TabOrder = 99
+        TabStop = False
         RowCount = 28
-        Viewport.Width = 174.700000000000000000
+        Viewport.Width = 208.600000000000000000
         Viewport.Height = 520.300000000000000000
+        object CheckColumn1: TCheckColumn
+          HorzAlign = Center
+          Size.Width = 30.000000000000000000
+        end
         object IntegerColumn1: TIntegerColumn
+          HorzAlign = Center
           Header = #37096#23627#30058#21495
+          ReadOnly = True
           Size.Width = 57.000000000000000000
         end
         object StringColumn1: TStringColumn
+          HorzAlign = Center
           Header = #21033#29992#32773
+          ReadOnly = True
           Size.Width = 115.000000000000000000
         end
       end
@@ -27139,62 +27152,76 @@ object F_InputData: TF_InputData
         Align = Client
         CanFocus = True
         ClipChildren = True
-        Size.Width = 804.347839355468800000
+        Size.Width = 800.367126464843800000
         Size.Height = 545.302001953125000000
         Size.PlatformDefault = False
         TabOrder = 5
         RowCount = 28
-        Viewport.Width = 784.300000000000000000
+        OnEditingDone = StringGrid2EditingDone
+        Viewport.Width = 780.400000000000000000
         Viewport.Height = 504.300000000000000000
         object IntegerColumn2: TIntegerColumn
+          HorzAlign = Center
           Header = '3'#26376
           Size.Width = 60.000000000000000000
         end
         object IntegerColumn3: TIntegerColumn
+          HorzAlign = Center
           Header = '4'#26376
           Size.Width = 60.000000000000000000
         end
         object IntegerColumn4: TIntegerColumn
+          HorzAlign = Center
           Header = '5'#26376
           Size.Width = 60.000000000000000000
         end
         object IntegerColumn5: TIntegerColumn
+          HorzAlign = Center
           Header = '6'#26376
           Size.Width = 60.000000000000000000
         end
         object IntegerColumn6: TIntegerColumn
+          HorzAlign = Center
           Header = '7'#26376
           Size.Width = 60.000000000000000000
         end
         object IntegerColumn7: TIntegerColumn
+          HorzAlign = Center
           Header = '8'#26376
           Size.Width = 60.000000000000000000
         end
         object IntegerColumn8: TIntegerColumn
+          HorzAlign = Center
           Header = '9'#26376
           Size.Width = 60.000000000000000000
         end
         object IntegerColumn9: TIntegerColumn
+          HorzAlign = Center
           Header = '10'#26376
           Size.Width = 60.000000000000000000
         end
         object IntegerColumn10: TIntegerColumn
+          HorzAlign = Center
           Header = '11'#26376
           Size.Width = 60.000000000000000000
         end
         object IntegerColumn11: TIntegerColumn
+          HorzAlign = Center
           Header = '12'#26376
           Size.Width = 60.000000000000000000
         end
         object IntegerColumn12: TIntegerColumn
+          HorzAlign = Center
           Header = '1'#26376
           Size.Width = 60.000000000000000000
         end
         object IntegerColumn13: TIntegerColumn
+          HorzAlign = Center
           Header = '2'#26376
           Size.Width = 60.000000000000000000
         end
         object IntegerColumn14: TIntegerColumn
+          HorzAlign = Center
           Header = '3'#26376
           Size.Width = 60.000000000000000000
         end
@@ -27204,5 +27231,20 @@ object F_InputData: TF_InputData
   object OpenDialog1: TOpenDialog
     Left = 968
     Top = 584
+  end
+  object ExcelApp: TExcelApplication
+    Active = False
+    Left = 968
+    Top = 552
+  end
+  object ExcelBook: TExcelWorkbook
+    Active = False
+    Left = 968
+    Top = 520
+  end
+  object ExcelSheet: TExcelWorksheet
+    Active = False
+    Left = 968
+    Top = 488
   end
 end
