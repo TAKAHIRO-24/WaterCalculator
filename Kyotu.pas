@@ -145,7 +145,7 @@ begin
         outputPos[0,i] := changedRoomNumber[i];
         for j := 0 to 12 do
         begin
-          outputPos[j+1,i] := ReadString('•”‰®'+FormatFloat('00',i), 'month'+FormatFloat('00',j), '-1');
+          outputPos[j+1,i] := ReadString('•”‰®'+FormatFloat('00',i), 'month'+FormatFloat('00',j), '');
         end;
       end;
     finally
