@@ -2,13 +2,15 @@ object F_FormCreate: TF_FormCreate
   Left = 0
   Top = 0
   Caption = #24115#31080#20316#25104
-  ClientHeight = 480
-  ClientWidth = 640
+  ClientHeight = 95
+  ClientWidth = 280
   Position = ScreenCenter
   StyleBook = StyleBook1
   FormFactor.Width = 320
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnKeyDown = FormKeyDown
   DesignerMasterStyle = 0
   object StyleBook1: TStyleBook
     Styles = <
@@ -26927,7 +26929,89 @@ object F_FormCreate: TF_FormCreate
           720708636C6157686974650B4E6F726D616C436F6C6F720708636C6157686974
           650C50726573736564436F6C6F720708636C615768697465000000}
       end>
-    Left = 608
-    Top = 448
+    Top = 64
+  end
+  object ScaledLayout1: TScaledLayout
+    Align = Contents
+    OriginalWidth = 280.000000000000000000
+    OriginalHeight = 95.000000000000000000
+    Size.Width = 280.000000000000000000
+    Size.Height = 95.000000000000000000
+    Size.PlatformDefault = False
+    object Panel1: TPanel
+      Align = Top
+      Size.Width = 280.000000000000000000
+      Size.Height = 33.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object bt_cansel: TButton
+        Position.X = 3.000000000000000000
+        Position.Y = 5.000000000000000000
+        TabOrder = 0
+        Text = 'F3:'#12461#12515#12531#12475#12523
+        OnClick = bt_canselClick
+      end
+      object bt_close: TButton
+        Position.X = 193.000000000000000000
+        Position.Y = 5.000000000000000000
+        TabOrder = 2
+        Text = 'F12:'#32066#20102
+      end
+      object bt_create: TButton
+        Position.X = 99.000000000000000000
+        Position.Y = 5.000000000000000000
+        TabOrder = 1
+        Text = 'F9:'#38598#35336
+        OnClick = bt_createClick
+      end
+    end
+    object Panel2: TPanel
+      Align = Bottom
+      Position.Y = 33.000000000000000000
+      Size.Width = 280.000000000000000000
+      Size.Height = 62.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      object et_year: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 0
+        KeyboardType = NumberPad
+        FilterChar = '0123456789'
+        Text = '9999'
+        TextSettings.Font.Size = 20.000000000000000000
+        TextSettings.HorzAlign = Center
+        Position.X = 95.000000000000000000
+        Position.Y = 16.000000000000000000
+        Size.Width = 70.000000000000000000
+        Size.Height = 30.000000000000000000
+        Size.PlatformDefault = False
+        StyledSettings = [Family, Style, FontColor]
+        OnTyping = et_yearTyping
+        OnKeyDown = et_yearKeyDown
+        OnExit = et_yearExit
+      end
+      object lb_nengo: TLabel
+        StyledSettings = [Family, Style, FontColor]
+        Position.X = 38.000000000000000000
+        Position.Y = 16.000000000000000000
+        Size.Width = 50.000000000000000000
+        Size.Height = 30.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 20.000000000000000000
+        Text = #20196#21644
+        TabOrder = 1
+      end
+      object lb_nendo: TLabel
+        StyledSettings = [Family, Style, FontColor]
+        Position.X = 173.000000000000000000
+        Position.Y = 16.000000000000000000
+        Size.Width = 50.000000000000000000
+        Size.Height = 30.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 20.000000000000000000
+        Text = #24180#24230
+        TabOrder = 3
+      end
+    end
   end
 end
