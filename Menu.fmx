@@ -10,6 +10,7 @@ object F_Menu: TF_Menu
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
   OnCreate = FormCreate
+  OnKeyDown = FormKeyDown
   Left = 667
   Top = 292
   DesignerMasterStyle = 0

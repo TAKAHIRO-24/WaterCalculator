@@ -26,6 +26,8 @@ type
       Y: Single);
     procedure ButtonMouseLeave(Sender: TObject);
     procedure ButtonClick(Sender: TObject);
+    procedure FormKeyDown(Sender: TObject; var Key: Word; var KeyChar: Char;
+      Shift: TShiftState);
   private
     { private 宣言 }
     procedure InitProc;
@@ -56,6 +58,19 @@ begin
 end;
 
 //----------------------------------------------------------------------------//
+//  onKeyDown
+//----------------------------------------------------------------------------//
+procedure TF_Menu.FormKeyDown(Sender: TObject; var Key: Word; var KeyChar: Char;
+  Shift: TShiftState);
+begin
+  case Key of
+    VKF12: begin  //終了
+      Close;
+    end;
+  end;
+end;
+
+//----------------------------------------------------------------------------//
 //  onClick
 //----------------------------------------------------------------------------//
 procedure TF_Menu.ButtonClick(Sender: TObject);
@@ -64,8 +79,10 @@ var
   F_FormObject: TForm;
 begin
   try
+    //押下したボタン
     btName := TButton(Sender).Name;
 
+    //画面表示
     if (btName = 'bt_Manual') then
     begin
       F_FormObject := TF_Manual.Create(Self);
@@ -175,6 +192,7 @@ begin
   mm_InputData.Visible := False;
   mm_FormCreate.Visible := False;
   mm_Control.Visible := False;
+
 end;
 
 end.

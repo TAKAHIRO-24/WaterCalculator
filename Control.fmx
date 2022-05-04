@@ -26973,6 +26973,13 @@ object F_Control: TF_Control
         Text = 'F9:'#35352#37682
         OnClick = bt_recordClick
       end
+      object bt_close: TButton
+        Position.X = 561.000000000000000000
+        Position.Y = 16.000000000000000000
+        TabOrder = 3
+        Text = 'F12:'#32066#20102
+        OnClick = bt_closeClick
+      end
     end
     object Panel2: TPanel
       Align = Bottom
@@ -26988,7 +26995,7 @@ object F_Control: TF_Control
         Size.Width = 653.000000000000000000
         Size.Height = 462.000000000000000000
         Size.PlatformDefault = False
-        TabOrder = 3
+        TabOrder = 4
         RowCount = 28
         Viewport.Width = 633.000000000000000000
         Viewport.Height = 421.000000000000000000

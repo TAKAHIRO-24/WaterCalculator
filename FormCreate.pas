@@ -29,6 +29,7 @@ type
     procedure et_yearKeyDown(Sender: TObject; var Key: Word; var KeyChar: Char;
       Shift: TShiftState);
     procedure et_yearTyping(Sender: TObject);
+    procedure bt_closeClick(Sender: TObject);
   private
     { private 宣言 }
     //CSVファイル読込データ
@@ -102,6 +103,9 @@ begin
     VKF9: begin  //データ記録処理
       bt_createClick(Sender);
     end;
+    VKF12: begin  //終了
+      bt_closeClick(Sender);
+    end;
   end;
 end;
 
@@ -121,6 +125,14 @@ procedure TF_FormCreate.bt_createClick(Sender: TObject);
 begin
   //集計処理
   DataCreate;
+end;
+
+//----------------------------------------------------------------------------//
+//  F12Click
+//----------------------------------------------------------------------------//
+procedure TF_FormCreate.bt_closeClick(Sender: TObject);
+begin
+  Close;
 end;
 
 //----------------------------------------------------------------------------//
