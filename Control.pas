@@ -34,6 +34,7 @@ type
     Grd_Column14: TStringColumn;
     Grd_Column15: TStringColumn;
     Grd_Column7: TStringColumn;
+    Grd_Column16: TStringColumn;
     procedure FormCreate(Sender: TObject);
     procedure Grid1SetValue(Sender: TObject; const ACol, ARow: Integer;
       const Value: TValue);
@@ -161,22 +162,22 @@ end;
 procedure TF_Control.InitGrid;
 const
   //各マスタのGrid列の横幅
-  ComponentWidth: Array[0..2] of Array[0..15] of Integer = (
+  ComponentWidth: Array[0..2] of Array[0..16] of Integer = (
                      //一般マスタ
-                     (28,100,200,115,100,100,0,0,0,0,0,0,0,0,0,0)
+                     (28,100,200,115,100,100,0,0,0,0,0,0,0,0,0,0,0)
                      //住居マスタ
-                    ,(28,150,300,165,0,0,0,0,0,0,0,0,0,0,0,0)
+                    ,(28,150,300,165,0,0,0,0,0,0,0,0,0,0,0,0,0)
                      //取込マスタ
-                    ,(28,100,200,100,100,100,100,100,100,100,100,100,100,100,100,100)
+                    ,(28,100,200,100,100,100,100,100,100,100,100,100,100,100,100,100,100)
                       );
   //各マスタのGrid列のヘッダー
-  ComponentHeader: Array[0..2] of Array[0..15] of String = (
+  ComponentHeader: Array[0..2] of Array[0..16] of String = (
                      //一般マスタ
-                     ('','','','','','','','','','','','','','','','')
+                     ('','','','','','','','','','','','','','','','','')
                      //住居マスタ
-                    ,('','部屋番号','利用者','年間水道料入金額','','','','','','','','','','','','')
+                    ,('','部屋番号','利用者','年間水道料入金額','','','','','','','','','','','','','')
                      //取込マスタ
-                    ,('','部屋番号','利用者','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月','1月','2月','3月')
+                    ,('','部屋番号','利用者','部屋番号','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月','1月','2月','3月')
                       );
 
 var
@@ -321,7 +322,7 @@ begin
             StringGrid1.Cells[C, R] := roomOwner[C-1, R];
           end
           else
-          begin  //前年度3月～今年度3月
+          begin  //部屋番号、前年度3月～今年度3月
             Data1[C, R] := outputPos[C-2,R];
             StringGrid1.Cells[C, R] := outputPos[C-2,R];
           end;
@@ -379,8 +380,8 @@ begin
       begin
         for C := Low(outputPos) to High(outputPos) do
         begin
-          if (C in [3..15]) then
-          begin  //前年度3月～今年度3月
+          if (C in [3..16]) then
+          begin  //部屋番号、前年度3月～今年度3月
             outputPos[C-2, R] := StringGrid1.Cells[C, R]
           end
           else

@@ -796,6 +796,7 @@ begin
 
         for R := Low(outputPos[0]) to High(outputPos[0]) do
         begin
+{
 //          if (outputPos[0,R] <> ExcelSheet.range[outputPos[0,CurrentRow]].Value) then
           if (outputPos[0,R] <> ExcelSheet.range['A'+IntToStr(CurrentRow)].Value) then
           begin
@@ -803,7 +804,7 @@ begin
 //            Inc(CurrentRow);
             Continue;
           end;
-
+}
           for C := Low(outputPos) to High(outputPos) do
           begin
             if (C = 0) then

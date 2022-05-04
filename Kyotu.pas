@@ -139,13 +139,17 @@ begin
   begin
     try
       //部屋番号とCSVファイルの印字位置を取得
-      SetLength(outputPos, 14, 28);  //(room, month00, month01...month12)
+      SetLength(outputPos, 15, 28);  //(room, roomPos, month00, month01...month12)
       for i := 0 to 27 do
       begin
+        //部屋番号
         outputPos[0,i] := changedRoomNumber[i];
+        //部屋番号印字位置
+        outputPos[1,i] := ReadString('部屋'+FormatFloat('00',i), 'room', '');
+        //各月の印字位置
         for j := 0 to 12 do
         begin
-          outputPos[j+1,i] := ReadString('部屋'+FormatFloat('00',i), 'month'+FormatFloat('00',j), '');
+          outputPos[j+2,i] := ReadString('部屋'+FormatFloat('00',i), 'month'+FormatFloat('00',j), '');
         end;
       end;
     finally
@@ -234,9 +238,12 @@ begin
           //各利用者・各月ごとのCSV印字位置を保存
           for i := 0 to 27 do
           begin
+            //部屋番号印字位置
+            WriteString('部屋'+FormatFloat('00',i), 'room', outputPos[1,i]);
+            //各月の印字位置
             for j := 0 to 12 do
             begin
-              WriteString('部屋'+FormatFloat('00',i), 'month'+FormatFloat('00',j), outputPos[j+1,i]);
+              WriteString('部屋'+FormatFloat('00',i), 'month'+FormatFloat('00',j), outputPos[j+2,i]);
             end;
           end;
         end;
