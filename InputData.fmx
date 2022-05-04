@@ -27074,7 +27074,7 @@ object F_InputData: TF_InputData
         object bt_record: TButton
           Position.X = 853.000000000000000000
           Position.Y = 29.000000000000000000
-          TabOrder = 6
+          TabOrder = 5
           Text = 'F9:'#35352#37682
           OnClick = bt_recordClick
         end
@@ -27099,7 +27099,7 @@ object F_InputData: TF_InputData
           TextSettings.Font.Size = 20.000000000000000000
           TextSettings.HorzAlign = Center
           Text = #26032#35215
-          TabOrder = 7
+          TabOrder = 6
         end
         object et_path: TEdit
           Touch.InteractiveGestures = [LongTap, DoubleTap]
@@ -27121,7 +27121,7 @@ object F_InputData: TF_InputData
         object bt_close: TButton
           Position.X = 941.000000000000000000
           Position.Y = 29.000000000000000000
-          TabOrder = 5
+          TabOrder = 7
           Text = 'F12:'#32066#20102
           OnClick = bt_closeClick
         end
@@ -27133,7 +27133,7 @@ object F_InputData: TF_InputData
         Size.Width = 228.632873535156300000
         Size.Height = 545.302001953125000000
         Size.PlatformDefault = False
-        TabOrder = 99
+        TabOrder = 98
         TabStop = False
         RowCount = 28
         Viewport.Width = 208.600000000000000000
@@ -27162,7 +27162,7 @@ object F_InputData: TF_InputData
         Size.Width = 800.367126464843800000
         Size.Height = 545.302001953125000000
         Size.PlatformDefault = False
-        TabOrder = 5
+        TabOrder = 4
         RowCount = 28
         OnEditingDone = StringGrid2EditingDone
         Viewport.Width = 780.400000000000000000
