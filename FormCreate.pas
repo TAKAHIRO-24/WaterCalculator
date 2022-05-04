@@ -358,6 +358,15 @@ begin
                  + '.csv'
                  ;
 
+    //ファイル存在確認
+    if not (FileExists(CsvFilePath)) then
+    begin
+      showMessage('取込用ファイルが存在しません。'
+                 + #13#10
+                 +'データ入力画面よりファイルを作成してください。');
+      Exit;
+    end;
+
     CsvData1.LoadFromFile(CsvFilePath);
 
     //行数取得
@@ -427,6 +436,16 @@ begin
                  + CSV_MASTER_NAME
                  + '.csv'
                  ;
+
+    //ファイル存在確認
+    if not (FileExists(CsvFilePath)) then
+    begin
+      showMessage('マスタファイルが存在しません。'
+                 + #13#10
+                 +'システム管理者にご連絡ください。');
+      Exit;
+    end;
+
     CsvMaster1.LoadFromFile(CsvFilePath);
 
     //行数取得
@@ -615,12 +634,18 @@ begin
                       ;
     OutputData[27,R] := IntToStr(Dummy);
     //年間水道料入金額
-    for i := Low(roomOwner) to High(roomOwner) do
+    for i := Low(roomOwner[0]) to High(roomOwner[0]) do
     begin
       //部屋番号が一致する年間水道料入金額を取得
-      if (CommaToStr(OutputData[0,R]) = CommaToStr(roomOwner[0,i]))
-      then  OutputData[28,R] := roomOwner[2,i]
-      else  OutputData[28,R] := '42000';
+      if (CommaToStr(OutputData[0,R]) = CommaToStr(roomOwner[0,i])) then
+      begin
+        OutputData[28,R] := roomOwner[2,i];
+        break;
+      end
+      else
+      begin  //デフォルト値
+        OutputData[28,R] := '42000';
+      end;
     end;
     //請求・返金フラグ、差額、差額（印字用）
     Dummy := StrToIntDef(CommaToStr(OutputData[27,R]),0)
@@ -739,12 +764,19 @@ begin
               );
   end;
 
+  //ファイル存在確認
+  if not (FileExists(TemplateFilePath1+'.xlsx')) then
+  begin
+    showMessage('帳票作成用テンプレートファイルが存在しません。'
+               + #13#10
+               +'システム管理者にご連絡ください。');
+    Exit;
+  end;
+
   //テンプレートファイル複製
   TFile.Copy(TemplateFilePath1+'.xlsx', TemplateFilePath2+'.xlsx');
 
-
-  //
-
+  //帳票作成
   ExcelApp := CreateOleObject('Excel.Application');
   try
     ExcelBook := ExcelApp.WorkBooks.Open(FileName := TemplateFilePath2+'.xlsx'
