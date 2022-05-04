@@ -27015,7 +27015,7 @@ object F_InputData: TF_InputData
           TextSettings.Font.Size = 20.000000000000000000
           TextSettings.HorzAlign = Center
           Text = #24180#24230
-          TabOrder = 8
+          TabOrder = 9
         end
         object lb_period1: TLabel
           Position.X = 128.000000000000000000
@@ -27025,7 +27025,7 @@ object F_InputData: TF_InputData
           Size.PlatformDefault = False
           TextSettings.HorzAlign = Trailing
           Text = #20196#21644'99'#24180'99'#26376
-          TabOrder = 11
+          TabOrder = 12
         end
         object lb_period0: TLabel
           Position.X = 237.000000000000000000
@@ -27034,7 +27034,7 @@ object F_InputData: TF_InputData
           Size.Height = 17.000000000000000000
           Size.PlatformDefault = False
           Text = #65374
-          TabOrder = 9
+          TabOrder = 10
         end
         object lb_period2: TLabel
           Position.X = 262.000000000000000000
@@ -27043,7 +27043,7 @@ object F_InputData: TF_InputData
           Size.Height = 17.000000000000000000
           Size.PlatformDefault = False
           Text = #20196#21644'99'#24180'99'#26376
-          TabOrder = 10
+          TabOrder = 11
         end
         object lb_nengo: TLabel
           StyledSettings = [Family, Style, FontColor]
@@ -27055,10 +27055,10 @@ object F_InputData: TF_InputData
           TextSettings.Font.Size = 20.000000000000000000
           TextSettings.HorzAlign = Center
           Text = #20196#21644
-          TabOrder = 7
+          TabOrder = 8
         end
         object bt_cansel: TButton
-          Position.X = 776.000000000000000000
+          Position.X = 764.000000000000000000
           Position.Y = 29.000000000000000000
           TabOrder = 4
           Text = 'F3:'#12461#12515#12531#12475#12523
@@ -27072,9 +27072,9 @@ object F_InputData: TF_InputData
           OnClick = bt_fileClick
         end
         object bt_record: TButton
-          Position.X = 880.000000000000000000
+          Position.X = 853.000000000000000000
           Position.Y = 29.000000000000000000
-          TabOrder = 5
+          TabOrder = 6
           Text = 'F9:'#35352#37682
           OnClick = bt_recordClick
         end
@@ -27099,11 +27099,11 @@ object F_InputData: TF_InputData
           TextSettings.Font.Size = 20.000000000000000000
           TextSettings.HorzAlign = Center
           Text = #26032#35215
-          TabOrder = 6
+          TabOrder = 7
         end
         object et_path: TEdit
           Touch.InteractiveGestures = [LongTap, DoubleTap]
-          TabOrder = 12
+          TabOrder = 13
           ReadOnly = True
           Position.X = 376.000000000000000000
           Position.Y = 56.000000000000000000
@@ -27117,6 +27117,13 @@ object F_InputData: TF_InputData
           TabOrder = 3
           Text = 'F7:'#12487#12540#12479#25277#20986
           OnClick = bt_datadispClick
+        end
+        object bt_close: TButton
+          Position.X = 941.000000000000000000
+          Position.Y = 29.000000000000000000
+          TabOrder = 5
+          Text = 'F12:'#32066#20102
+          OnClick = bt_closeClick
         end
       end
       object StringGrid1: TStringGrid

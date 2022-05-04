@@ -50,6 +50,7 @@ type
     ExcelApp: TExcelApplication;
     ExcelBook: TExcelWorkbook;
     ExcelSheet: TExcelWorksheet;
+    bt_close: TButton;
     procedure FormCreate(Sender: TObject);
     procedure Grid1SetValue(Sender: TObject; const ACol, ARow: Integer;
       const Value: TValue);
@@ -73,6 +74,7 @@ type
       ARow: Integer);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure et_yearTyping(Sender: TObject);
+    procedure bt_closeClick(Sender: TObject);
   private
     { private 宣言 }
     Data1: Array of Array of TValue;
@@ -174,6 +176,9 @@ begin
     VKF9: begin  //データ記録処理
       bt_recordClick(Sender);
     end;
+    VKF12: begin  //終了
+      bt_closeClick(Sender);
+    end;
   end;
 end;
 
@@ -260,6 +265,14 @@ end;
 procedure TF_InputData.bt_recordClick(Sender: TObject);
 begin
   RecordProc;
+end;
+
+//----------------------------------------------------------------------------//
+//  F12:終了onClick
+//----------------------------------------------------------------------------//
+procedure TF_InputData.bt_closeClick(Sender: TObject);
+begin
+  Close;
 end;
 
 //----------------------------------------------------------------------------//

@@ -26969,9 +26969,16 @@ object F_Control: TF_Control
       object bt_record: TButton
         Position.X = 472.000000000000000000
         Position.Y = 16.000000000000000000
-        TabOrder = 2
+        TabOrder = 3
         Text = 'F9:'#35352#37682
         OnClick = bt_recordClick
+      end
+      object bt_close: TButton
+        Position.X = 561.000000000000000000
+        Position.Y = 16.000000000000000000
+        TabOrder = 2
+        Text = 'F12:'#32066#20102
+        OnClick = bt_closeClick
       end
     end
     object Panel2: TPanel

@@ -26956,6 +26956,7 @@ object F_FormCreate: TF_FormCreate
         Position.Y = 5.000000000000000000
         TabOrder = 2
         Text = 'F12:'#32066#20102
+        OnClick = bt_closeClick
       end
       object bt_create: TButton
         Position.X = 99.000000000000000000
