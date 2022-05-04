@@ -357,6 +357,7 @@ begin
                  + CSV_FILE_NAME
                  + '.csv'
                  ;
+
     CsvData1.LoadFromFile(CsvFilePath);
 
     //行数取得
@@ -752,11 +753,7 @@ begin
     try
       //1枚目のシートに保存
       ExcelSheet := ExcelBook.WorkSheets[1];
-//      //シート名を変更
-//      ExcelSheet.Name := lb_nengo.Text
-//                       + et_year.Text
-//                       + lb_nendo.Text
-//                       ;
+
       try
         for R := low(OutputData[0]) to High(OutputData[0])+2 do
         begin

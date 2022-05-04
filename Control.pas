@@ -358,9 +358,9 @@ begin
     //住居マスタ
     1: begin
       //Gridデータを配列に保存
-      for R := Low(roomOwner[0]) to High(roomOwner[0]) do
+      for R := 0 to StringGrid1.RowCount-1 do
       begin
-        for C := Low(roomOwner) to High(roomOwner) do
+        for C := 0 to StringGrid1.ColumnCount-1 do
         begin
           if (C in [1,2,3]) then
           begin  //部屋番号、利用者、年間水道料入金額
@@ -376,9 +376,9 @@ begin
     //取込マスタ
     2: begin
       //Gridデータを配列に保存
-      for R := Low(outputPos[0]) to High(outputPos[0]) do
+      for R := 0 to StringGrid1.RowCount-1 do
       begin
-        for C := Low(outputPos) to High(outputPos) do
+        for C := 0 to StringGrid1.ColumnCount-1 do
         begin
           if (C in [3..16]) then
           begin  //部屋番号、前年度3月～今年度3月
@@ -401,6 +401,9 @@ begin
     MsgDlg(0, '設定ファイル書き込みでエラーが発生しました。');
     Exit;
   end;
+
+  //完了メッセージ
+  MessageDlg('設定の変更が完了しました。',TMsgDlgType.mtInformation, [TMsgDlgBtn.mbYes], 0);
 
   //画面初期化
   InitProc;
