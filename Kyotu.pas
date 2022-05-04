@@ -27,6 +27,8 @@ type  //メッセージリスト
   function SetIniFile(IniType: Integer): Boolean;
   //和暦変換
   function ChangeToWareki(year: Integer): String;
+  //カンマ付き数値文字列を数値に変換
+  function CommaToStr(cur: String): String;
 
 var
   roomOwner: Array of Array of String;
@@ -69,7 +71,7 @@ const
                                                ,'202'  //01
                                                ,'203'  //02
                                                ,'205'  //03
-                                               ,'201'  //04
+                                               ,'301'  //04
                                                ,'302'  //05
                                                ,'303'  //06
                                                ,'305'  //07
@@ -139,13 +141,17 @@ begin
   begin
     try
       //部屋番号とCSVファイルの印字位置を取得
-      SetLength(outputPos, 14, 28);  //(room, month00, month01...month12)
+      SetLength(outputPos, 15, 28);  //(room, roomPos, month00, month01...month12)
       for i := 0 to 27 do
       begin
+        //部屋番号
         outputPos[0,i] := changedRoomNumber[i];
+        //部屋番号印字位置
+        outputPos[1,i] := ReadString('部屋'+FormatFloat('00',i), 'room', '');
+        //各月の印字位置
         for j := 0 to 12 do
         begin
-          outputPos[j+1,i] := ReadString('部屋'+FormatFloat('00',i), 'month'+FormatFloat('00',j), '');
+          outputPos[j+2,i] := ReadString('部屋'+FormatFloat('00',i), 'month'+FormatFloat('00',j), '');
         end;
       end;
     finally
@@ -234,9 +240,12 @@ begin
           //各利用者・各月ごとのCSV印字位置を保存
           for i := 0 to 27 do
           begin
+            //部屋番号印字位置
+            WriteString('部屋'+FormatFloat('00',i), 'room', outputPos[1,i]);
+            //各月の印字位置
             for j := 0 to 12 do
             begin
-              WriteString('部屋'+FormatFloat('00',i), 'month'+FormatFloat('00',j), outputPos[j+1,i]);
+              WriteString('部屋'+FormatFloat('00',i), 'month'+FormatFloat('00',j), outputPos[j+2,i]);
             end;
           end;
         end;
@@ -310,5 +319,39 @@ begin
 
   Result := wareki;
 end;
+
+//----------------------------------------------------------------------------//
+//  カンマ付き数値文字列を数値に変換
+//  引数　： String
+//  戻値　：　Integer
+//----------------------------------------------------------------------------//
+function CommaToStr(cur: String): String;
+const
+  NumTable = ['0' .. '9', '-', '.'];
+var
+  dst: String;
+  i: Byte;
+  CFlg: Boolean;
+begin
+  for i := 1 to Length(cur) do
+    // '0'..'9','-','.'以外は無視
+    if (cur[i] in NumTable) then
+      begin
+        CFlg := True;
+        // '-'が先頭の時以外は無視
+        if (cur[i] = '-') and (i > 1) then
+          CFlg := False;
+        // '.'２個目以降は無視
+        if (cur[i] = '.') and (Pos('.', dst) > 0) then
+          CFlg := False;
+        if CFlg then
+          dst := dst + cur[i];
+      end;
+  if (Length(dst) = 0) then
+    result := '0'
+  else
+    result := dst;
+end;
+
 
 end.

@@ -27030,6 +27030,8 @@ object F_Control: TF_Control
         end
         object Grd_Column15: TStringColumn
         end
+        object Grd_Column16: TStringColumn
+        end
       end
     end
   end
